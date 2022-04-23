@@ -45,7 +45,9 @@
     "typecheck:modular": "modular typecheck",
     "typecheck:toolkit:test": "tsc --noEmit --project packages/core/src/__tests__/tsconfig.json",
     "typecheck:toolkit:e2e": "tsc --noEmit --project packages/core/src/__tests__/__e2e__/tsconfig.json",
-    "chromatic": "chromatic"
+    "chromatic": "chromatic",
+    "start:theme-editor-app": "modular start @brandname/theme-editor-app",
+    "css-to-json": "ts-node --project tsconfig.json tooling/theme-editor/src/helpers/run.ts"
   },
   "dependencies": {
     "@changesets/cli": "^2.25.2",
@@ -127,7 +129,7 @@
     "sass": "^1.52.3",
     "stylelint": "^15.0.0",
     "tinycolor2": "^1.4.2",
-    "ts-node": "^10.4.0",
+    "ts-node": "^10.7.0",
     "typescript": "4.6.4",
     "vite": "^3.1.0",
     "vite-plugin-istanbul": "^4.0.0",
