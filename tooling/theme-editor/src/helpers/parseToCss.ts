@@ -2,7 +2,11 @@
 //@ts-nocheck
 import { capitalize } from "@salt-ds/core";
 import { JSONByScope } from "./parseToJson";
-import { SALT_CHARACTERISTICS, SALT_FOUNDATIONS } from "../utils/saltValues";
+import {
+  SALT_CHARACTERISTICS,
+  SALT_FOUNDATIONS,
+  SALT_COMPONENTS,
+} from "../utils/saltValues";
 
 export type CSSByPattern = {
   pattern: string;
@@ -19,14 +23,21 @@ function transformToCSS(patternJsonByScope) {
     const tokenPrefix = stringCSS.split("{").slice(-1)[0].split(";").slice(-1);
     Object.keys(node).map((path) => {
       if (path !== "value") {
-        stringCSS += "-" + path;
-        recurse(node[path]);
-        if (path !== lastNode) {
-          stringCSS += tokenPrefix;
+        if (path !== "type") {
+          stringCSS += "-" + path;
+          recurse(node[path]);
+          if (path !== lastNode) {
+            stringCSS += tokenPrefix;
+          }
+        } else {
+          // ignore "type" = color, Figma Tokens need this
         }
       } else {
         if (node[path].startsWith("salt")) {
           stringCSS += ": var(--" + node[path] + ");";
+        } else if (node[path].startsWith("{")) {
+          // console.log(node[path]);
+          stringCSS += ": " + referenceToCssVar(node[path]) + ";";
         } else if (node[path].startsWith("*")) {
           const cssVars = node[path].split("*").filter((v) => v.length > 1);
           stringCSS += ":";
@@ -57,6 +68,8 @@ function transformToCSS(patternJsonByScope) {
   }
 
   patternJsonByScope.forEach((element) => {
+    const isComponentScope = /^[A-Z]/.test(element.scope as string);
+
     let selector;
     if (element.scope === "mode-all") {
       selector = `.salt-theme`;
@@ -65,13 +78,13 @@ function transformToCSS(patternJsonByScope) {
     } else if (element.scope.includes("emphasis")) {
       selector = `.saltEmphasis${capitalize(element.scope.split("-")[1])}`;
     } else {
-      selector = `.salt-${element.scope}`;
+      selector = `.salt${isComponentScope ? "" : "-"}${element.scope}`;
     }
     stringCSS = stringCSS + selector + "{";
 
     Object.keys(element.jsonObj).forEach((path) => {
       if (path !== "value") {
-        stringCSS += "--salt-" + path;
+        stringCSS += (isComponentScope ? "--" : "--salt-") + path;
         recurse(element.jsonObj[path]);
       } else {
         stringCSS += ": " + element.jsonObj[path];
@@ -87,9 +100,12 @@ function transformToCSS(patternJsonByScope) {
 export function parseJSONtoCSS(jsonByScope: JSONByScope[]): CSSByPattern[] {
   let cssByPattern = [];
 
-  for (var patternName of SALT_FOUNDATIONS.concat(SALT_CHARACTERISTICS)) {
+  for (var patternName of SALT_FOUNDATIONS.concat(SALT_CHARACTERISTICS).concat(
+    SALT_COMPONENTS
+  )) {
     const patternJsonByScope = jsonByScope
       .filter((element) => {
+        // TODO: remove hard requirement of "salt" being the first key
         return element.jsonObj.salt[patternName];
       })
       .map((element) => {
@@ -105,4 +121,17 @@ export function parseJSONtoCSS(jsonByScope: JSONByScope[]): CSSByPattern[] {
   }
 
   return cssByPattern;
+}
+
+/**
+ * "{uitk.color.blue.600}"" => "var(--uitk-color-blue-600)"
+ */
+function referenceToCssVar(reference: string) {
+  return (
+    "var(--" +
+    reference
+      .replaceAll(/[\{\}]/g, "") // remove { &}
+      .replaceAll(/\./g, "-") + // replace . with -
+    ")"
+  );
 }

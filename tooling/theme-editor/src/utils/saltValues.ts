@@ -27,3 +27,5 @@ export const SALT_FOUNDATIONS = [
   "typography",
   "zindex",
 ];
+
+export const SALT_COMPONENTS = ["button"];
