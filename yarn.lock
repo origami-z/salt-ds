@@ -4359,6 +4359,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@jpmorganchase/theme-flow-app@workspace:playground/theme-flow-app":
+  version: 0.0.0-use.local
+  resolution: "@jpmorganchase/theme-flow-app@workspace:playground/theme-flow-app"
+  languageName: unknown
+  linkType: soft
+
 "@jridgewell/gen-mapping@npm:^0.3.0, @jridgewell/gen-mapping@npm:^0.3.2":
   version: 0.3.2
   resolution: "@jridgewell/gen-mapping@npm:0.3.2"
