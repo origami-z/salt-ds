@@ -1,5 +1,5 @@
 export const SALT_CHARACTERISTICS = [
-  "accent",
+  // "accent",
   "actionable",
   "container",
   "delay",
@@ -36,6 +36,11 @@ export const SALT_PALETTES = [
   "rate",
   "error",
   "negative",
+  "info",
+  "measure",
+  "accent",
+  "neutral",
+  "action",
 ];
 
 export const SALT_COMPONENTS = ["button"];
