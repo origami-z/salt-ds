@@ -28,4 +28,14 @@ export const SALT_FOUNDATIONS = [
   "zindex",
 ];
 
+export const SALT_PALETTES = [
+  "success",
+  "positive",
+  "warning",
+  "navigate",
+  "rate",
+  "error",
+  "negative",
+];
+
 export const SALT_COMPONENTS = ["button"];

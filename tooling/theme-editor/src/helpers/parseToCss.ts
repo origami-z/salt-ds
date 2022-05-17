@@ -6,6 +6,7 @@ import {
   SALT_CHARACTERISTICS,
   SALT_FOUNDATIONS,
   SALT_COMPONENTS,
+  SALT_PALETTES,
 } from "../utils/saltValues";
 
 export type CSSByPattern = {
@@ -100,7 +101,10 @@ function transformToCSS(patternJsonByScope) {
 export function parseJSONtoCSS(jsonByScope: JSONByScope[]): CSSByPattern[] {
   let cssByPattern = [];
 
-  for (var patternName of SALT_FOUNDATIONS.concat(SALT_CHARACTERISTICS).concat(
+  // TODO: Back to drawing board to figure out the best way to not need to do patterns in this generic layer of code
+  for (var patternName of SALT_FOUNDATIONS.concat(
+    SALT_PALETTES,
+    SALT_CHARACTERISTICS,
     SALT_COMPONENTS
   )) {
     const patternJsonByScope = jsonByScope
