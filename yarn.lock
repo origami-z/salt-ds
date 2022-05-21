@@ -17148,6 +17148,14 @@ __metadata:
   languageName: node
   linkType: hard
 
+"generic-style-generator@workspace:tooling/generic-style-generator":
+  version: 0.0.0-use.local
+  resolution: "generic-style-generator@workspace:tooling/generic-style-generator"
+  dependencies:
+    style-dictionary: ^3.7.0
+  languageName: unknown
+  linkType: soft
+
 "gensync@npm:^1.0.0-beta.1, gensync@npm:^1.0.0-beta.2":
   version: 1.0.0-beta.2
   resolution: "gensync@npm:1.0.0-beta.2"
@@ -29848,6 +29856,25 @@ __metadata:
   version: 1.0.5
   resolution: "strnum@npm:1.0.5"
   checksum: 651b2031db5da1bf4a77fdd2f116a8ac8055157c5420f5569f64879133825915ad461513e7202a16d7fec63c54fd822410d0962f8ca12385c4334891b9ae6dd2
+  languageName: node
+  linkType: hard
+
+"style-dictionary@npm:^3.7.0":
+  version: 3.7.0
+  resolution: "style-dictionary@npm:3.7.0"
+  dependencies:
+    chalk: ^4.0.0
+    change-case: ^4.1.2
+    commander: ^8.3.0
+    fs-extra: ^10.0.0
+    glob: ^7.2.0
+    json5: ^2.2.0
+    jsonc-parser: ^3.0.0
+    lodash: ^4.17.15
+    tinycolor2: ^1.4.1
+  bin:
+    style-dictionary: bin/style-dictionary
+  checksum: 97fd972e5eb57d931a2dc2f5e6461642f7c9cdff9bc54642b8ab1372b3a9e613f57fefdca406b773b9d5e061e8450a20967ab3d0c6da5bb2787ea246cede3eac
   languageName: node
   linkType: hard
 
