@@ -6,7 +6,8 @@
   "sideEffects": false,
   "scripts": {
     "build": "yarn clean && yarn node ./scripts/generateIcons.mjs '*.svg'",
-    "clean": "rimraf ./src/components"
+    "clean": "rimraf ./src/components",
+    "build:figma": "node ./scripts/generateIconHtml.js '*.svg'"
   },
   "peerDependencies": {
     "@types/react": ">=16.8.6",
