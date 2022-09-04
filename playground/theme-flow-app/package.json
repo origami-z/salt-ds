@@ -5,6 +5,7 @@
   "modular": {
     "type": "app"
   },
+  "homepage": "http://abc.def.io/theme-flow-app/",
   "dependencies": {
     "@salt-ds/theme-editor": ">=1.0.0",
     "css-tree": "^2.0.4",
