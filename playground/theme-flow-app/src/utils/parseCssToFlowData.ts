@@ -3,10 +3,11 @@
 // For some reason, import from root doesn't work
 import { parse, walk } from "css-tree/dist/csstree.esm";
 import {
-  UITK_CHARACTERISTICS,
-  UITK_COMPONENTS,
-  UITK_PALETTES,
-} from "@jpmorganchase/theme-editor/src/utils/uitkValues";
+  SALT_CHARACTERISTICS,
+  SALT_FOUNDATIONS,
+  SALT_PALETTES,
+  SALT_COMPONENTS,
+} from "@salt-ds/theme-editor/src/utils/saltValues";
 
 import {
   CssNode,
@@ -51,11 +52,11 @@ export function parseCssToFlowData(css: string) {
         declarations[0].property
       );
 
-      const groupId = UITK_COMPONENTS.includes(idFromPropertyName)
+      const groupId = SALT_COMPONENTS.includes(idFromPropertyName)
         ? selectorListToString(node.prelude)
-        : UITK_PALETTES.includes(idFromPropertyName)
+        : SALT_PALETTES.includes(idFromPropertyName)
         ? "PaletteGroup"
-        : UITK_CHARACTERISTICS.includes(idFromPropertyName)
+        : SALT_CHARACTERISTICS.includes(idFromPropertyName)
         ? "CharateristicsGroup"
         : // Things left should be foundations
           idFromPropertyName;
