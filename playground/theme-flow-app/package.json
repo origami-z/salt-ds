@@ -9,7 +9,7 @@
   "dependencies": {
     "@salt-ds/theme-editor": ">=1.0.0",
     "css-tree": "^2.0.4",
-    "react-flow-renderer": "^10.0.0"
+    "reactflow": "^11.0.0"
   },
   "devDependencies": {
     "@types/css-tree": "^1.0.7"

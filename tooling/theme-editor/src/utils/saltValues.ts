@@ -43,4 +43,4 @@ export const SALT_PALETTES = [
   "action",
 ];
 
-export const SALT_COMPONENTS = ["button"];
+export const SALT_COMPONENTS = ["button", "statusIcon"];

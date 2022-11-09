@@ -2754,15 +2754,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.18.9":
-  version: 7.22.5
-  resolution: "@babel/runtime@npm:7.22.5"
-  dependencies:
-    regenerator-runtime: ^0.13.11
-  checksum: 12a50b7de2531beef38840d17af50c55a094253697600cee255311222390c68eed704829308d4fd305e1b3dfbce113272e428e9d9d45b1730e0fede997eaceb1
-  languageName: node
-  linkType: hard
-
 "@babel/template@npm:^7.12.7, @babel/template@npm:^7.18.10, @babel/template@npm:^7.20.7, @babel/template@npm:^7.3.3":
   version: 7.20.7
   resolution: "@babel/template@npm:7.20.7"
@@ -5298,6 +5289,102 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@reactflow/background@npm:11.2.4":
+  version: 11.2.4
+  resolution: "@reactflow/background@npm:11.2.4"
+  dependencies:
+    "@reactflow/core": 11.7.4
+    classcat: ^5.0.3
+    zustand: ^4.3.1
+  peerDependencies:
+    react: ">=17"
+    react-dom: ">=17"
+  checksum: 17ca98de506254701876e58e5c7baf49b2d9ccd71fc3d2349a3fed06a2402bc111f48374c06b5a81f08c8059a0caacce71a5553a9fd6232cbdd4c98ebec57e9d
+  languageName: node
+  linkType: hard
+
+"@reactflow/controls@npm:11.1.15":
+  version: 11.1.15
+  resolution: "@reactflow/controls@npm:11.1.15"
+  dependencies:
+    "@reactflow/core": 11.7.4
+    classcat: ^5.0.3
+    zustand: ^4.3.1
+  peerDependencies:
+    react: ">=17"
+    react-dom: ">=17"
+  checksum: 7568c69bfa32d674645877c3d0b5c9d7ae3c1a08640e6bb7310868f3001f624f2c535335aa16270b9ff31abe64b7d5960b930cba2c6539fa815bba07accd7403
+  languageName: node
+  linkType: hard
+
+"@reactflow/core@npm:11.7.4, @reactflow/core@npm:^11.6.0":
+  version: 11.7.4
+  resolution: "@reactflow/core@npm:11.7.4"
+  dependencies:
+    "@types/d3": ^7.4.0
+    "@types/d3-drag": ^3.0.1
+    "@types/d3-selection": ^3.0.3
+    "@types/d3-zoom": ^3.0.1
+    classcat: ^5.0.3
+    d3-drag: ^3.0.0
+    d3-selection: ^3.0.0
+    d3-zoom: ^3.0.0
+    zustand: ^4.3.1
+  peerDependencies:
+    react: ">=17"
+    react-dom: ">=17"
+  checksum: 8e0bef41d6cd348dd98454d3a0d50495bd7e7a89c99757abccd68a80c916a109900265b9c20fc2bc1e94e6eca235a56d0b15c214fe8106133253d1db457c69b9
+  languageName: node
+  linkType: hard
+
+"@reactflow/minimap@npm:11.5.4":
+  version: 11.5.4
+  resolution: "@reactflow/minimap@npm:11.5.4"
+  dependencies:
+    "@reactflow/core": 11.7.4
+    "@types/d3-selection": ^3.0.3
+    "@types/d3-zoom": ^3.0.1
+    classcat: ^5.0.3
+    d3-selection: ^3.0.0
+    d3-zoom: ^3.0.0
+    zustand: ^4.3.1
+  peerDependencies:
+    react: ">=17"
+    react-dom: ">=17"
+  checksum: 01373f6345f0864c2758057f3fd3328da154ef22b164c2b4888aeaeb28e5a5a1a84cdd80e47e067c0b2da920fc5ef885fcb6baab6f3d0ebccb4fac5310dcd094
+  languageName: node
+  linkType: hard
+
+"@reactflow/node-resizer@npm:2.1.1":
+  version: 2.1.1
+  resolution: "@reactflow/node-resizer@npm:2.1.1"
+  dependencies:
+    "@reactflow/core": ^11.6.0
+    classcat: ^5.0.4
+    d3-drag: ^3.0.0
+    d3-selection: ^3.0.0
+    zustand: ^4.3.1
+  peerDependencies:
+    react: ">=17"
+    react-dom: ">=17"
+  checksum: f820d3e738eb7eca35eed93b157914ba9e177dfc594a503f3ca29a67dc848918e2962552b7a8a14ed92a2aed3900e3bb463a79773d387cd7d03241dbf4d7c666
+  languageName: node
+  linkType: hard
+
+"@reactflow/node-toolbar@npm:1.2.3":
+  version: 1.2.3
+  resolution: "@reactflow/node-toolbar@npm:1.2.3"
+  dependencies:
+    "@reactflow/core": 11.7.4
+    classcat: ^5.0.3
+    zustand: ^4.3.1
+  peerDependencies:
+    react: ">=17"
+    react-dom: ">=17"
+  checksum: 09d81021909563a83c5ff82a578c2bb820eaaf7f0593b8bbfff5decd48ce43fb4470a4c7939a3cf75a235d21625af886c8707a34184a1f4d6576af348088db47
+  languageName: node
+  linkType: hard
+
 "@rollup/plugin-babel@npm:5.3.1":
   version: 5.3.1
   resolution: "@rollup/plugin-babel@npm:5.3.1"
@@ -5634,7 +5721,7 @@ __metadata:
     "@salt-ds/theme-editor": ">=1.0.0"
     "@types/css-tree": ^1.0.7
     css-tree: ^2.0.4
-    react-flow-renderer: ^10.0.0
+    reactflow: ^11.0.0
   languageName: unknown
   linkType: soft
 
@@ -7673,7 +7760,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/d3-drag@npm:*":
+"@types/d3-drag@npm:*, @types/d3-drag@npm:^3.0.1":
   version: 3.0.2
   resolution: "@types/d3-drag@npm:3.0.2"
   dependencies:
@@ -7788,7 +7875,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/d3-selection@npm:*":
+"@types/d3-selection@npm:*, @types/d3-selection@npm:^3.0.3":
   version: 3.0.5
   resolution: "@types/d3-selection@npm:3.0.5"
   checksum: 77ea35c92273cd2d736355ab5a4cf6477086b064a1f608489a6fef4198ee6bc1d5440e5dfd880099265ac96c4f4b4fda659d89fbaaef37ba03708663196ba8ad
@@ -7834,7 +7921,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/d3-zoom@npm:*":
+"@types/d3-zoom@npm:*, @types/d3-zoom@npm:^3.0.1":
   version: 3.0.3
   resolution: "@types/d3-zoom@npm:3.0.3"
   dependencies:
@@ -8483,13 +8570,6 @@ __metadata:
   dependencies:
     "@types/react": "*"
   checksum: f4711d707a1af653178c8941080e989a945feb0c529d848fed36687ee5e8a462cda183383caadf8848497b5c03bec16e6cdf22fc70462913d8d706cabb597130
-  languageName: node
-  linkType: hard
-
-"@types/resize-observer-browser@npm:^0.1.7":
-  version: 0.1.7
-  resolution: "@types/resize-observer-browser@npm:0.1.7"
-  checksum: 0377eaac8bb7a17b983b49a156006032380b459bfebefc54a5aa2f7f8a9786d2b60723e8837c61ef733330b478f4f26293e9edbdc8006238e4f80c878c56c988
   languageName: node
   linkType: hard
 
@@ -12002,7 +12082,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"classcat@npm:^5.0.3":
+"classcat@npm:^5.0.3, classcat@npm:^5.0.4":
   version: 5.0.4
   resolution: "classcat@npm:5.0.4"
   checksum: 77373c58fa15ad2d4494b5c73c7ed2f859e7126227c357a3931e3f2a28e45dd9d8e779c1c8d3a8ba9ece833b21f14cd79160a7999973e28888d7e47f56c83170
@@ -26939,25 +27019,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-flow-renderer@npm:^10.0.0":
-  version: 10.3.17
-  resolution: "react-flow-renderer@npm:10.3.17"
-  dependencies:
-    "@babel/runtime": ^7.18.9
-    "@types/d3": ^7.4.0
-    "@types/resize-observer-browser": ^0.1.7
-    classcat: ^5.0.3
-    d3-drag: ^3.0.0
-    d3-selection: ^3.0.0
-    d3-zoom: ^3.0.0
-    zustand: ^3.7.2
-  peerDependencies:
-    react: 16 || 17 || 18
-    react-dom: 16 || 17 || 18
-  checksum: caf7c67952ec846a10d55f2f6b3881ca2096a35e86e958693f8cc0cb22449ed17abc3aff9b6c43ccc23cdbdeed27d4e99e9671e0a873fb42eddf36caf450eaee
-  languageName: node
-  linkType: hard
-
 "react-immutable-proptypes@npm:2.2.0":
   version: 2.2.0
   resolution: "react-immutable-proptypes@npm:2.2.0"
@@ -27299,6 +27360,23 @@ __metadata:
   dependencies:
     lodash: ^4.0.1
   checksum: c53e386a0881f1477e1cff661f6a6ad4c662230941f3827862193ac30f9b75cdf7bc7b4c7e5ca543d3e4e80fee1a3e9fa0056c206b1c0423726c41773ab3fe45
+  languageName: node
+  linkType: hard
+
+"reactflow@npm:^11.0.0":
+  version: 11.7.4
+  resolution: "reactflow@npm:11.7.4"
+  dependencies:
+    "@reactflow/background": 11.2.4
+    "@reactflow/controls": 11.1.15
+    "@reactflow/core": 11.7.4
+    "@reactflow/minimap": 11.5.4
+    "@reactflow/node-resizer": 2.1.1
+    "@reactflow/node-toolbar": 1.2.3
+  peerDependencies:
+    react: ">=17"
+    react-dom: ">=17"
+  checksum: c5178deb5db1764b7e819e2ba8fa6b410e7ff3ee217c3d6c95ece80fcf103f8b9304084a96dda518f097bc0259e53b72199fdbd3291b3fdd1412117fc0a8e8a3
   languageName: node
   linkType: hard
 
@@ -33104,18 +33182,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zustand@npm:^3.7.2":
-  version: 3.7.2
-  resolution: "zustand@npm:3.7.2"
-  peerDependencies:
-    react: ">=16.8"
-  peerDependenciesMeta:
-    react:
-      optional: true
-  checksum: 18f025b1b666a311121d3855303ff58e6a21fd107920ca474307e86984c13338d6c4cfa5cdf13382a9e0f76821f2554a12d4d200a98a66b58637e729f149797b
-  languageName: node
-  linkType: hard
-
 "zustand@npm:^4.1.1":
   version: 4.3.3
   resolution: "zustand@npm:4.3.3"
@@ -33130,6 +33196,23 @@ __metadata:
     react:
       optional: true
   checksum: fe0277ab0ce14849dea254cbdcfe83d4614364d38e616875f75ef2419f29085f5b03605efabeb33189a4557e647efaa294e0984c4f642e0566f445a7b207cdd6
+  languageName: node
+  linkType: hard
+
+"zustand@npm:^4.3.1":
+  version: 4.3.8
+  resolution: "zustand@npm:4.3.8"
+  dependencies:
+    use-sync-external-store: 1.2.0
+  peerDependencies:
+    immer: ">=9.0"
+    react: ">=16.8"
+  peerDependenciesMeta:
+    immer:
+      optional: true
+    react:
+      optional: true
+  checksum: 24db6bf063ce1fc8b2ee238f13211a88f43236541a716e5f6f706f613c671a45332465f9ed06d694f8c353da3d24c53ea668e5712a86aceda9ad74f6c433e8c0
   languageName: node
   linkType: hard
 
