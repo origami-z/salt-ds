@@ -24,5 +24,10 @@
     "playground",
     "./declarations.d.ts"
   ],
-  "exclude": ["**/*.cy.*", "**/*.spec.*", "**/*.test.*"]
+  "exclude": [
+    "**/*.cy.*",
+    "**/*.spec.*",
+    "**/*.test.*",
+    "tooling/figma-style-generator"
+  ]
 }
