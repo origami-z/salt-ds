@@ -1,5 +1,21 @@
 # @salt-ds/core
 
+## 1.1.0
+
+### Minor Changes
+
+- 380bbb91: Remove foundations from 'characteristic' type and add missing characteristic 'differential'
+
+  ```diff
+  -  "delay"
+  -  "disabled"
+  -  "icon"
+  -  "shadow"
+  -  "size"
+  -  "spacing"
+  +  "differential"
+  ```
+
 ## 1.0.0
 
 ### Major Changes
